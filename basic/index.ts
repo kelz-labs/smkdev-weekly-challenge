@@ -9,13 +9,13 @@ type DataProps = {
   };
 };
 
-function basic({ m, t }: DataProps) {
+function basic({ m, t }: DataProps): string {
   /**
    * A function to calculate bmi
    * @param {number} m - for massa
    * @param {number} t - for tinggi
    */
-  function bmi(m: number, t: number) {
+  function bmi<T extends number>(m: T, t: T): number {
     return m / (t * t);
   }
 
